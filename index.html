@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>3D Dice Roller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-panel">
+      <div class="eyebrow">Interactive 3D</div>
+      <h1>Dice Roller</h1>
+      <p class="hero-copy">Tap the die or press roll to send it tumbling through a smooth 3D animation and land on a random face.</p>
+      <div class="controls">
+        <button id="rollBtn" class="primary-btn">Roll Dice</button>
+        <button id="resetBtn" class="ghost-btn">Reset View</button>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Last Roll</div>
+        <div id="resultValue" class="result-value">—</div>
+        <div id="statusText" class="status-text">Ready to roll</div>
+      </div>
+    </section>
+    <section class="stage-panel">
+      <div id="sceneWrap" class="scene-wrap">
+        <canvas id="scene"></canvas>
+        <button id="tapRoll" class="tap-roll" aria-label="Tap to roll the dice">Tap die to roll</button>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./app.js" crossorigin="anonymous"></script>
+</body>
+</html>
